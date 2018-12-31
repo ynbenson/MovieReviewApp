@@ -69,7 +69,8 @@
                 <li><a href=ranking>Ranking</a></li>
             @auth
                 {{-- FIXME: ここPOSTにしたいんだけどどうすれば良い？ --}}
-                <li><a href=reviewMovies>Matcher</a></li>
+                <li><a href={{route('reviewMovie')}}>Matcher</a></li>
+                
             @else
                 <li><a href="#">Content 4</a></li>
             @endauth
@@ -82,6 +83,7 @@
         @show
         @section('footer')
         <footer><h1>フッター</h1></footer>
+        {{Form::open(['action' => 'Controller@method'])}}
         @show
     </div>
 </body>
